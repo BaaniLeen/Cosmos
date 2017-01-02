@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pack>
+    <snippet attachedevent="false" class="scripts.Design_0_0_AlienMovement" classname="scripts.Design_0_0_AlienMovement" desc="" description="" design="true" drawOrder="0" id="0" name="Alien Movement" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="2" defaultValue="2" desc="" dropdown="" fullname="Movement Speed" hidden="false" id="2" name="_MovementSpeed" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Slid and Increased for Self" hidden="true" id="3" name="_SlidandIncreasedforSelf" order="2"/>
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_32_32_ItemsRemaining" classname="scripts.Design_32_32_ItemsRemaining" desc="Keeps track of the number of items remaining in the specified actor group. Provides the option to switch scenes when the number of items reaches zero." description="Keeps track of the number of items remaining in the specified actor group. Provides the option to switch scenes when the number of items reaches zero." design="true" drawOrder="0" id="32" name="Items Remaining" oid="-1" package="scripts" shared="false" type="scene">
+        <actorgroup default="" defaultValue="" desc="Specify the Actor Group that will be monitored" dropdown="" fullname="Monitor Actor Group" hidden="false" id="1" name="_MonitorActorGroup" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Count" hidden="true" id="2" name="_Count" order="0"/>
+        <text default="" defaultValue="" desc="This is the message to send when there are no Actors left in the specified group.  Leave blank to send no message." dropdown="" fullname="Message When None Left" hidden="false" id="3" name="_MessageWhenNoneLeft" order="8"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Done" hidden="true" id="4" name="_Done" order="2"/>
+        <boolean default="false" defaultValue="false" desc="Check this box to display a numerical counter of the number of items left.&lt;br&gt;&#10;" dropdown="" fullname="Display Counter?" hidden="false" id="5" name="_DisplayCounter" order="4"/>
+        <number default="0" defaultValue="0" desc="Horizontal offset to display the number of items left" dropdown="" fullname="Display X Offset" hidden="false" id="6" name="_DisplayXOffset" order="6"/>
+        <number default="0" defaultValue="0" desc="Vertical offset to display the number of items left" dropdown="" fullname="Display Y Offset" hidden="false" id="7" name="_DisplayYOffset" order="7"/>
+        <font default="" defaultValue="" desc="Font used to display the number of items left." dropdown="" fullname="Display Font" hidden="false" id="10" name="_DisplayFont" order="5"/>
+        <boolean default="false" defaultValue="false" desc="Check this box to switch the scene when no items are left." dropdown="" fullname="Switch Scene When None Left?" hidden="false" id="11" name="_SwitchSceneWhenNoneLeft" order="9"/>
+        <scene default="" defaultValue="" desc="Select the Scene to switch to when there are no items left." dropdown="" fullname="Scene To Switch To" hidden="false" id="12" name="_SceneToSwitchTo" order="10"/>
+        <number default="0.5" defaultValue="0.5" desc="Enter the time to fade out." dropdown="" fullname="Scene Fade Out Time" hidden="false" id="13" name="_SceneFadeOutTime" order="11"/>
+        <number default="0.5" defaultValue="0.5" desc="Enter the time to fade in." dropdown="" fullname="Scene Fade In Time" hidden="false" id="14" name="_SceneFadeInTime" order="12"/>
+        <blocks>
+            <ureceiver blockID="0" id="1"/>
+            <receiver blockID="46" id="2"/>
+        </blocks>
+        <events>
+            <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="3" name="draw" order="3" repeats="true"/>
+            <event displayName="GetItemsRemaining" enabled="true" id="5" name="receiver-2-10" order="5" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_1" classname="scripts.SceneEvents_1" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="33" name="SceneEvents_1" oid="-1" package="scripts." sceneid="1" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_2" classname="scripts.SceneEvents_2" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="34" name="SceneEvents_2" oid="-1" package="scripts." sceneid="2" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Keyboard" enabled="true" id="1" name="event-key-press-release" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="3" attachedevent="true" class="scripts.ActorEvents_3" classname="scripts.ActorEvents_3" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="3" name="ActorEvents_3" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="10" attachedevent="true" class="scripts.ActorEvents_10" classname="scripts.ActorEvents_10" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="8" name="ActorEvents_10" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_10_10_DieandKillWhenHit" classname="scripts.Design_10_10_DieandKillWhenHit" desc="When hit, kill the collided actor and kill self." description="When hit, kill the collided actor and kill self." design="true" drawOrder="0" id="10" name="Die and Kill When Hit" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="Actor - Any" enabled="true" id="1" name="collide" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="15" attachedevent="true" class="scripts.ActorEvents_15" classname="scripts.ActorEvents_15" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="12" name="ActorEvents_15" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="18" attachedevent="true" class="scripts.ActorEvents_18" classname="scripts.ActorEvents_18" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="14" name="ActorEvents_18" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="26" attachedevent="true" class="scripts.ActorEvents_26" classname="scripts.ActorEvents_26" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="18" name="ActorEvents_26" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_21_21_DieWhenOffScreen" classname="scripts.Design_21_21_DieWhenOffScreen" desc="" description="" design="true" drawOrder="0" id="21" name="Die When Off Screen" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="29" attachedevent="true" class="scripts.ActorEvents_29" classname="scripts.ActorEvents_29" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="22" name="ActorEvents_29" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_23_23_DoonKeyPress" classname="scripts.Design_23_23_DoonKeyPress" desc="Performs the specified action when the given key is pressed." description="Performs the specified action when the given key is pressed." design="true" drawOrder="0" id="23" name="Do on Key Press" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <text default="" defaultValue="" desc="Message that's sent." dropdown="" fullname="Action to Perform" hidden="false" id="1" name="action" order="0"/>
+        <control default="" defaultValue="" desc="The control to listen for." dropdown="" fullname="Key" hidden="false" id="2" name="key" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_24_24_FireBulletOneAtaTime" classname="scripts.Design_24_24_FireBulletOneAtaTime" desc="Fires a bullet (specify what actor this is) in the direction that the actor is facing. Another bullet can only be spawned if the previous bullet is dead." description="Fires a bullet (specify what actor this is) in the direction that the actor is facing. Another bullet can only be spawned if the previous bullet is dead." design="true" drawOrder="0" id="24" name="Fire Bullet One At a Time" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="7"/>
+        <text default="" defaultValue="" desc="The trigger that will cause the shot to fire." dropdown="" fullname="Triggering Message" hidden="false" id="1" name="trigger" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="How fast the spawned actor should move. Stick to positive numbers." dropdown="" fullname="Speed" hidden="false" id="2" name="speed" order="5"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="spawned" hidden="true" id="3" name="spawned" order="4"/>
+        <actortype default="" defaultValue="" desc="Choose which type of bullet you would like to fire." dropdown="" fullname="Bullet" hidden="false" id="4" name="bullet" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="Which way does the shooter face by default?" dropdown="North=90&#10;North East=45&#10;East=0&#10;South East=315&#10;South=270&#10;South West=225&#10;West=180&#10;North West=135" fullname="Inital Shooter Angle" hidden="false" id="5" name="shooterangle" order="3"/>
+        <number default="270" defaultValue="270" desc="Which way does the bullet face by default?" dropdown="North=90&#10;North East=45&#10;East=0&#10;South East=315&#10;South=270&#10;South West=225&#10;West=180&#10;North West=135" fullname="Inital Bullet Angle" hidden="false" id="6" name="bulletangle" order="2"/>
+        <sound default="" defaultValue="" desc="The sound you would like played when the shot is fired." dropdown="" fullname="Sound to Play" hidden="false" id="7" name="sound" order="0"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Can Fire?" hidden="true" id="8" name="_CanFire" order="8"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Bullet Created" hidden="true" id="9" name="_BulletCreated" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Fired" hidden="true" id="10" name="_Fired" order="10"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y Offset" hidden="false" id="11" name="_YOffset" order="11"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X Offset" hidden="false" id="12" name="_XOffset" order="12"/>
+        <blocks/>
+        <events>
+            <event displayName="Custom Event" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_25_25_2WayControl" classname="scripts.Design_25_25_2WayControl" desc="Allows the player to move just left and right." description="Allows the player to move just left and right." design="true" drawOrder="0" id="25" name="2 Way Control" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="pressedLeft" hidden="true" id="18" name="pressedLeft" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="pressedRight" hidden="true" id="19" name="pressedRight" order="0"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Left Control" hidden="false" id="7" name="controlLeft" order="6"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Right Control" hidden="false" id="8" name="controlRight" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="Left=3&#10;Right=4" fullname="Initial Direction" hidden="false" id="9" name="dir" order="0"/>
+        <number default="18" defaultValue="18" desc="The fastest it will move." dropdown="" fullname="Top Speed" hidden="false" id="11" name="topSpeed" order="2"/>
+        <number default="0" defaultValue="0" desc="How quickly it loses speed when the key's let go." dropdown="" fullname="Slowdown Rate" hidden="false" id="12" name="decel" order="3"/>
+        <blocks/>
+        <events>
+            <event displayName="moveRight" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="checkInput" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="moveLeft" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_26_26_PositionLimiter" classname="scripts.Design_26_26_PositionLimiter" desc="Prevents it from going through the walls since it's a kinematic actor." description="Prevents it from going through the walls since it's a kinematic actor." design="true" drawOrder="0" id="26" name="Position Limiter" oid="-1" package="" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="35" attachedevent="true" class="scripts.ActorEvents_35" classname="scripts.ActorEvents_35" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="27" name="ActorEvents_35" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="31" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="VictoryCounter" hidden="false" id="1" name="_VictoryCounter" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Win?" hidden="false" id="2" name="_Win" order="1"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="You Win!" hidden="false" id="3" name="_YouWin" order="2"/>
+        <number default="100" defaultValue="100" desc="" dropdown="" fullname="xcoord" hidden="false" id="4" name="_xcoord" order="3"/>
+        <number default="100.0" defaultValue="100.0" desc="" dropdown="" fullname="ycoord" hidden="false" id="5" name="_ycoord" order="6"/>
+        <number default="36" defaultValue="36" desc="" dropdown="" fullname="maxcount" hidden="false" id="6" name="_maxcount" order="4"/>
+        <number default="1" defaultValue="1" desc="" dropdown="" fullname="increment" hidden="false" id="7" name="_increment" order="5"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="2" name="event-group-create-kill" order="3" repeats="false"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="4" repeats="false"/>
+            <event displayName="Drawing" enabled="true" id="4" name="draw" order="5" repeats="true"/>
+        </events>
+    </snippet>
+</pack>
